@@ -21,15 +21,17 @@ function check() {
         //if more are correct then it prints out a message depending on the order of score [0,1,2..etc]
 var messages = ["Great job!", "Thats is just okay", "You really need to do better"];
 
-//
-var range;
+var pictures = ["assets/images/swinner.gif", "assets/images/Smeh.gif", "assets/images/pfalling.gif"];
+
+var score;
+//if less than one then the score will dictate which message and picture is displayed
         if (correct < 1) {
             score = 2;
         }
-        if (correct > 0 && correct < 3) {
+        if (correct > 0 && correct < 4) {
             score = 1; 
         }
-        if (correct > 2) {
+        if (correct > 3) {
             score = 0;
         }
 
@@ -39,6 +41,8 @@ document.getElementById("after-submit").style.visibility = "visible";
 //types up message to display to user
 document.getElementById("message").innerHTML = messages[score];
 //tells user how many questions they got correct
-document.getElementById("number-correct").innerHTML = "You got " + correct + " correct.";           
+document.getElementById("number-correct").innerHTML = "You got " + correct + " correct."; 
+//shows user pictures from the array depending on the score
+document.getElementById("picture").src = pictures[score];          
 
 }

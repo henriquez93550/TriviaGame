@@ -2,6 +2,48 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
-#after-submit {
+#quiz {
+    margin-left: 10px;
+    background: wheat;
+    padding: 10px 20px 10px 20px;
+    width: 400px;
+    border-radius: 20px; /* rounds out the edges */
+    float: left; /* float left to have pics show up side by side */
+}
+
+input {
+    margin-bottom: 10px; /* space between answers */
     
+}
+#button {
+    background: green;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    transition-duration: .5s;
+    margin-top: 15px;
+}
+#button:hover {
+    background: white;
+    border: 1px solid green;
+    color: black;
+}
+
+#after-submit {
+    visibility: hidden;
+    background: coral;
+    padding: 10px 20px 10px 20px;
+    width: 400px;
+    float: left;
+    margin-left: 20px;
+    font-size: 30px;
+}
+#picture {
+    width: 375;
+    height: 245px;
+}
+#multchoice {
+    display: inline;
 }
